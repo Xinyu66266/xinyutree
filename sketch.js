@@ -114,23 +114,13 @@ function sendTheMessage() {
 
 function readIncoming(inMessage) {
 
-  if (allowMessage == true) {
-
+  if (allowMessage == true) { // if there is less than 10 people on the page draw circles then show the messages that are sent. 
+ 
     if (inMessage.channel == channelName) {
-         who = inMessage.publisher;
-   
-         let newinput = true;
-   
-         for(let i = 0; i<occupancy;i++) {
-           if(who==occupancy) {
-             newinput = false;   
-           }
-         }
-         if(newinput) {
-          occupancy.push(who); // if there is a new viewer, change the video speed
-         }
-     }
-  }
+        console.log(inMessage);
+    }
+  } 
+
 
 }
 
