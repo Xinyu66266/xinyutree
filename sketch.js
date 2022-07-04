@@ -29,9 +29,16 @@ let vidSpeed; // variable to change the video speed
 
 let allowMessage = false;
 
+let you;
+
 function preload() { // preload our yoyo video
   vid = createVideo("yoyo.mov"); 
   vid.pause();
+  you = random(0,1000000); 
+  console.log(you);
+  you = int(you);
+  console.log(you);
+  you = you.toString();
 }
 
 function setup() {
@@ -42,8 +49,8 @@ function setup() {
   dataServer = new PubNub({
     subscribeKey: subKey,
     publishKey: pubKey,
-    uuid: "Xinyu",
-    secretKey: "secretKey",
+    uuid: you,
+    secretKey: secretKey,
     heartbeatInterval: 0,
   });
 
